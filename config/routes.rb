@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   resources :posts
+  root "posts#index"
+
+  post "/sign_in", to: "sessions#sign_in"
+  post "/sign_out", to: "sessions#sign_out"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
