@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :comments
   resources :posts
-  root "posts#index"
+  root "posts#list"
+
 
   post "/sign_in", to: "sessions#sign_in"
   post "/sign_out", to: "sessions#sign_out"

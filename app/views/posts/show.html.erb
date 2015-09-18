@@ -3,13 +3,9 @@
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @post.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:body) %>:</strong></dt>
-  <dd><%= @post.body %></dd>
-</dl>
-
+<p><%= @post.body %></p>
+<hr />
+<div><span>Leave a comment!</span></div>
 <%= render 'comments/form' %>
 
 <div id="comments">
