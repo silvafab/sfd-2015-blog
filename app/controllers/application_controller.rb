@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :get_current_user
 
   def authenticate
-    if session[:user_id].nil?
+    if @current_user.nil?
       flash[:error] = "You need to sign in!" 
       redirect_to "/"
     end

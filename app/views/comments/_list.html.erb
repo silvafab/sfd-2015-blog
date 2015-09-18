@@ -1,0 +1,5 @@
+<% post.comments.each do |comment| %>
+    <%= image_tag comment.gravatar_url %>
+    <strong><%= comment.email %></strong>
+    <p><%= comment.text %></p>
+  <% end %>

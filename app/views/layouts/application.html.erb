@@ -60,6 +60,7 @@
           <% end %>
         <% else %>
           <%= form_tag "/sign_out", method: "post", class: "navbar-form navbar-right" do %>
+            <%= image_tag @current_user.gravatar_url %>
             <%= label_tag "Hi #{@current_user.email}" %>
             <%= submit_tag "Sign out" %>
           <% end %>

@@ -1,6 +1,8 @@
 require "digest"
 
 class User < ActiveRecord::Base
+  include Gravtastic
+  gravtastic
 
   before_save :hash_password
 
